@@ -13,7 +13,8 @@ void setup() {
   }
 }
 
-void loop() {
+void loop()
+{
   if (WiFi.status() == WL_CONNECTED) {                  //Check WiFi connection status
     HTTPClient http;                                    //Declare object of class HTTPClient
     WiFiClient client;
