@@ -2,9 +2,9 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 
+String str;
+
 void setup() {
-  pinMode(2, OUTPUT);
-  digitalWrite(2, LOW);
   Serial.begin(115200);                                 //Serial connection
   WiFi.begin("CMT_M-1", "EMuema@123");                  //WiFi connection
   while (WiFi.status() != WL_CONNECTED) {               //Wait for the WiFI connection completion
@@ -13,8 +13,7 @@ void setup() {
   }
 }
 
-void loop()
-{
+void loop() {
   if (WiFi.status() == WL_CONNECTED) {                  //Check WiFi connection status
     HTTPClient http;                                    //Declare object of class HTTPClient
     WiFiClient client;
